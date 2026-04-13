@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Phone, User, Calendar, MessageCircle, CheckCircle2, Loader2 } from 'lucide-react';
+import { X, CheckCircle2, Loader2 } from 'lucide-react';
 import { supabase } from '../supabaseClient';
 
 const BookingModal = ({ isOpen, onClose, content }) => {
@@ -59,66 +59,73 @@ const BookingModal = ({ isOpen, onClose, content }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="absolute inset-0 bg-primary-950/60 backdrop-blur-md"
+          className="absolute inset-0 bg-black/40 backdrop-blur-sm"
           onClick={onClose}
         />
 
         {/* Modal */}
         <motion.div
-           initial={{ opacity: 0, scale: 0.9, y: 20 }}
-           animate={{ opacity: 1, scale: 1, y: 0 }}
-           exit={{ opacity: 0, scale: 0.9, y: 20 }}
-           className="relative w-full max-w-lg bg-white rounded-none shadow-2xl overflow-hidden"
-           onClick={(e) => e.stopPropagation()}
+          initial={{ opacity: 0, scale: 0.9, y: 20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          exit={{ opacity: 0, scale: 0.9, y: 20 }}
+          className="relative w-full max-w-md bg-white rounded-[8px] shadow-2xl overflow-hidden"
+          onClick={(e) => e.stopPropagation()}
         >
           {/* Header */}
-          <div className="relative h-32 bg-primary-600 flex items-center justify-center" style={{ backgroundColor: '#3B82F6' }}>
-            <h3 className="text-2xl font-bold text-white uppercase tracking-wider">{content.nav.admission}</h3>
+          <div className="relative h-28 bg-[#2563eb] flex items-center justify-center">
+            <h3 className="text-[22px] font-600 text-white tracking-tight">{content.nav.admission}</h3>
             <button 
               onClick={onClose}
-              className="absolute top-6 right-6 p-2 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors"
+              className="absolute top-6 right-6 p-2 hover:bg-white/20 text-white rounded-[4px] transition-colors"
             >
               <X size={20} />
             </button>
           </div>
 
           {/* Form / Success State */}
-          <div className="p-10">
+          <div className="p-8">
             {success ? (
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-10 space-y-6"
+                className="text-center py-8 space-y-6"
               >
-                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
-                  <CheckCircle2 size={48} />
+                <div className="w-16 h-16 bg-green-50 text-green-600 rounded-[4px] flex items-center justify-center mx-auto">
+                  <CheckCircle2 size={40} />
                 </div>
                 <div>
-                  <h4 className="text-2xl font-bold text-gray-900 mb-2">Registration Successful!</h4>
-                  <p className="text-gray-500">We have received your admission request. Our team will contact you within 24 hours.</p>
+                  <h4 className="text-[18px] font-600 text-[#1a1a2e] mb-2">Registration Successful!</h4>
+                  <p className="text-[15px] text-[#6b7280] leading-relaxed">
+                    We have received your admission request. Our team will contact you within 24 hours.
+                  </p>
                 </div>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="text-center">
-                  <p className="text-gray-500 font-medium">Quick Inquiry Form</p>
-                  <p className="text-sm text-gray-400 mt-1">We'll get back to you within 24 hours.</p>
+                  <p className="text-[15px] text-[#6b7280] font-400">Quick Inquiry Form</p>
+                  <p className="text-[13px] text-[#9ca3af] mt-1">We'll get back to you within 24 hours.</p>
                 </div>
 
-                <div className="space-y-5">
-                  <div className="relative">
-                    <User className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-[14px] font-600 text-[#1a1a2e] mb-2">
+                      Full Name
+                    </label>
                     <input 
                       required
                       type="text" 
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder={content.contact.form.name}
-                      className="w-full pl-14 pr-6 py-4 bg-gray-50 border-0 rounded-none focus:ring-2 focus:ring-primary-600 transition-all font-medium"
+                      placeholder="Your name"
+                      className="w-full px-4 py-3 text-[16px] text-[#1a1a2e] bg-[#f8f9fc] border border-[#e5e7eb] rounded-[4px] focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-all font-400"
                     />
                   </div>
-                  <div className="relative">
-                    <Phone className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                  
+                  <div>
+                    <label className="block text-[14px] font-600 text-[#1a1a2e] mb-2">
+                      Phone Number
+                    </label>
                     <input 
                       required
                       type="tel" 
@@ -127,19 +134,22 @@ const BookingModal = ({ isOpen, onClose, content }) => {
                       title="Phone number must be exactly 10 digits"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value.replace(/\D/g, '') })}
-                      placeholder={content.contact.form.phone}
-                      className="w-full pl-14 pr-6 py-4 bg-gray-50 border-0 rounded-none focus:ring-2 focus:ring-primary-600 transition-all font-medium"
+                      placeholder="10 digit phone number"
+                      className="w-full px-4 py-3 text-[16px] text-[#1a1a2e] bg-[#f8f9fc] border border-[#e5e7eb] rounded-[4px] focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-all font-400"
                     />
                   </div>
-                  <div className="relative">
-                    <Calendar className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                  
+                  <div>
+                    <label className="block text-[14px] font-600 text-[#1a1a2e] mb-2">
+                      Age
+                    </label>
                     <input 
                       required
                       type="text" 
                       value={formData.age}
                       onChange={(e) => setFormData({ ...formData, age: e.target.value })}
-                      placeholder="Your Age"
-                      className="w-full pl-14 pr-6 py-4 bg-gray-50 border-0 rounded-none focus:ring-2 focus:ring-primary-600 transition-all font-medium"
+                      placeholder="Your age"
+                      className="w-full px-4 py-3 text-[16px] text-[#1a1a2e] bg-[#f8f9fc] border border-[#e5e7eb] rounded-[4px] focus:outline-none focus:border-[#2563eb] focus:ring-1 focus:ring-[#2563eb] transition-all font-400"
                     />
                   </div>
                 </div>
@@ -147,19 +157,21 @@ const BookingModal = ({ isOpen, onClose, content }) => {
                 <button 
                   type="submit"
                   disabled={loading || !supabase}
-                  className="w-full py-5 bg-primary-600 text-white rounded-none font-black text-lg hover:shadow-xl hover:shadow-primary-600/30 transition-all uppercase tracking-widest disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
+                  className="w-full py-3 bg-[#2563eb] text-white rounded-[4px] font-600 text-[15px] hover:bg-[#1d4ed8] transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>
-                      <Loader2 className="animate-spin mr-2" size={20} />
+                      <Loader2 className="animate-spin" size={18} />
                       Submitting...
                     </>
                   ) : !supabase ? "Missing Database Config" : "Submit Request"}
                 </button>
 
-                <div className="flex items-center justify-center space-x-4 pt-4 border-t border-gray-100">
-                  <p className="text-sm font-bold text-gray-400">OR CALL IMMEDIATELY:</p>
-                  <a href="tel:7775928111" className="text-primary-600 font-extrabold">+91 77759 28111</a>
+                <div className="pt-4 border-t border-[#e5e7eb] text-center">
+                  <p className="text-[13px] font-500 text-[#6b7280] mb-3">OR CALL IMMEDIATELY:</p>
+                  <a href="tel:7775928111" className="text-[#2563eb] font-600 text-[15px] hover:text-[#1d4ed8] transition-colors">
+                    +91 77759 28111
+                  </a>
                 </div>
               </form>
             )}

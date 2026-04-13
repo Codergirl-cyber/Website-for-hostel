@@ -6,7 +6,6 @@ import Facilities from './components/Facilities';
 
 import Gallery from './components/Gallery';
 import VideoSection from './components/VideoSection';
-import Contact from './components/Contact';
 import MapSection from './components/MapSection';
 import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
@@ -29,7 +28,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-[#f8fafc] font-sans selection:bg-primary-100 selection:text-primary-900 overflow-x-hidden w-full max-w-full relative">
+    <div className="bg-white font-sans selection:bg-[#dbeafe] selection:text-[#2563eb] overflow-x-hidden w-full max-w-full relative">
       <Navbar 
         lang={lang} 
         setLang={setLang} 
@@ -50,8 +49,6 @@ function App() {
         
         <VideoSection content={content} />
         
-        <Contact content={content} />
-        
         <MapSection content={content} />
       </main>
 
@@ -68,7 +65,7 @@ function App() {
       <div className="fixed bottom-8 right-8 z-40 md:hidden">
         <a 
           href="tel:+917775928111"
-          className="w-16 h-16 bg-primary-600 text-white rounded-full shadow-2xl flex items-center justify-center animate-bounce hover:animate-none"
+          className="w-16 h-16 bg-[#2563eb] text-white rounded-full shadow-lg flex items-center justify-center animate-bounce hover:animate-none hover:bg-[#1d4ed8] transition-colors"
         >
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

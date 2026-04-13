@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alpino:wght@400;500;600;700&family=Merriweather+Sans:wght@400;500;600;700&family=Erode:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -15,28 +16,106 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  font-family: 'Alpino', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
   font-weight: 400;
+  color: #1a1a2e;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #f8fafc;
+  color-scheme: light;
+  background-color: #f8f9fc;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
 }
 
 body {
   margin: 0;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  color: #1e293b;
-  background-color: #f8fafc;
+  color: #1a1a2e;
+  background-color: #f8f9fc;
   overflow-x: hidden;
+  width: 100%;
   max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Merriweather Sans', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h2 {
+  font-size: clamp(1.875rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+h2 {
+  font-family: 'Erode', system-ui, sans-serif;
+}
+
+/* CTA Button Styles */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-family: 'Erode', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+/* Section Spacing */
+section {
+  padding: 80px 0;
+}
+
+/* Max Content Width */
+.max-w-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @layer base {

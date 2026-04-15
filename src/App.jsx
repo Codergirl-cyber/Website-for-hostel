@@ -18,7 +18,7 @@ function App() {
   const content = translations[lang];
 
   // Simple routing for admin
-  if (window.location.pathname === '/admin') {
+  if (window.location.pathname.replace(/\/$/, '') === '/admin') {
     return <Admin />;
   }
 

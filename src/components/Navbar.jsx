@@ -33,7 +33,7 @@ const Navbar = ({ lang, setLang, content, onOpenModal }) => {
               <img 
                 src="/logo.png" 
                 alt="Gurukul Boys Hostel Logo" 
-                className="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105 max-h-10 max-w-10"
               />
               <span className="text-lg font-600 text-[#1a1a2e] transition-colors duration-300 hidden sm:block">
                 GURUKUL

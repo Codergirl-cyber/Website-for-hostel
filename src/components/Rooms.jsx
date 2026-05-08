@@ -58,7 +58,7 @@ const Rooms = ({ content }) => {
               className="bg-white border border-[#e5e7eb] overflow-hidden flex flex-col h-full hover:border-[#2563eb] transition-all duration-300"
             >
               {/* Image Container */}
-              <div className="relative overflow-hidden group aspect-4-3">
+              <div className="relative overflow-hidden group h-64 sm:h-72">
                 <img 
                   src={room.img} 
                   alt={room.type} 

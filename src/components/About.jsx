@@ -34,11 +34,11 @@ const About = ({ content }) => {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 order-1 lg:order-2"
           >
-            <div className="relative overflow-hidden group aspect-4-3">
+            <div className="relative overflow-hidden group h-80 sm:h-96">
               <img
                 src={studentsGroup}
                 alt="Gurukul Boys Hostel Students"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 border border-[#e5e7eb]" />
             </div>

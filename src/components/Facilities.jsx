@@ -81,8 +81,8 @@ const Facilities = ({ content }) => {
 
               {/* Right: Image Grid */}
               <div className="lg:w-1/2 order-1 lg:order-2">
-                <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full min-h-[400px]">
-                  <div className="col-span-2 row-span-1 relative overflow-hidden group">
+                <div className="grid grid-cols-2 grid-rows-2 gap-4 min-h-[300px] sm:min-h-[400px]">
+                  <div className="col-span-2 row-span-1 relative overflow-hidden group h-48 sm:h-56">
                     <img 
                       src={studyPointImg} 
                       alt="Gurukul Study Point Area" 
@@ -90,7 +90,7 @@ const Facilities = ({ content }) => {
                     />
                     <div className="absolute inset-0 border border-[#e5e7eb]" />
                   </div>
-                  <div className="col-span-1 row-span-1 relative overflow-hidden group">
+                  <div className="col-span-1 row-span-1 relative overflow-hidden group h-36 sm:h-44">
                     <img 
                       src={studyPoint2} 
                       alt="Study Area" 
@@ -98,7 +98,7 @@ const Facilities = ({ content }) => {
                     />
                     <div className="absolute inset-0 border border-[#e5e7eb]" />
                   </div>
-                  <div className="col-span-1 row-span-1 relative overflow-hidden group">
+                  <div className="col-span-1 row-span-1 relative overflow-hidden group h-36 sm:h-44">
                     <img 
                       src={studyPoint3} 
                       alt="Office Area" 

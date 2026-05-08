@@ -1,26 +1,16 @@
- A full-stack hostel management web app built to handle student registrations, data storage, and admin-level control efficiently.
+# React + Vite
 
- Features
- Student Registration Form
- Admin Panel (Protected Access)
-  View & Manage Student Data
- Delete Records (Admin Only)
-  Real-time Data Sync with Backend
-  Database Integration with relational structure
- Authentication & Access Control
- Tech Stack
-Frontend: React / Next.js
-Backend: API Routes / Server Logic
-Database: Supabase (PostgreSQL)
-Auth: Supabase Auth
-Deployment: Vercel
-  Project Structure
-/frontend        → UI components & pages  
-/backend         → API routes / server logic  
-/database        → schema & policies  
- Admin Access
-Admin panel is protected via authentication
-Only authorized users can:
-View all submissions
-Delete entries
-Manage data
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

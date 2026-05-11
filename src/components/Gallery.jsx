@@ -34,13 +34,13 @@ const Gallery = ({ content }) => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="relative group overflow-hidden cursor-pointer border border-[#e5e7eb] transition-all duration-300 hover:border-[#2563eb] h-60 sm:h-72"
+              className="relative group overflow-hidden cursor-pointer border border-[#e5e7eb] transition-all duration-300 hover:border-[#2563eb] aspect-video"
               onClick={() => setSelectedImg(img.url)}
             >
               <img 
                 src={img.url} 
                 alt={img.title} 
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" 
               />
               <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="w-12 h-12 bg-white rounded-[4px] flex items-center justify-center text-[#2563eb] shadow-lg">

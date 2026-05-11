@@ -5,7 +5,7 @@ import hostelHero from '../assets/images/hostel_hero.jpg';
 
 const Hero = ({ content, onOpenModal }) => {
   return (
-    <section id="home" className="relative h-screen min-h-[600px] flex items-center overflow-hidden pt-16">
+    <section id="home" className="relative min-h-screen md:h-screen flex items-center overflow-hidden pt-16">
       {/* Background Image with Solid Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img 

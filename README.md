@@ -10,7 +10,7 @@ Contact form
 Smooth scrolling navigation
 Mobile-friendly design
 Fast loading and optimized assets
-Admin dashboard
+Admin dashboard with password
 
 Tech Stack
 React
@@ -20,21 +20,13 @@ JavaScript
 Supabase
 
 
-Folder Structure
-src/
-│
-├── components/
-├── assets/
-├── pages/
-├── styles/
-└── App.jsx
 
 
-Future Improvements
-Online room booking system
-Authentication for students/admin
-Payment integration
-Reviews and ratings
-Contributing
+
+Future Improvements-
+Online room booking system,
+Payment integration,
+Reviews and ratings,
+Contributing.
 
 Pull requests are welcome. For major changes, open an issue first to discuss what you would like to change.

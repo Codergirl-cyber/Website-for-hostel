@@ -56,16 +56,16 @@ const Facilities = ({ content }) => {
             transition={{ duration: 0.8 }}
             className="pt-8 border-t border-[#e5e7eb]"
           >
-            <div className="flex flex-col lg:flex-row gap-16 items-center">
+            <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start lg:items-center">
               {/* Left: Content */}
-              <div className="lg:w-1/2 order-2 lg:order-1">
+              <div className="lg:w-1/2 order-2 lg:order-1 w-full">
                 <h3 className="text-[28px] font-600 text-[#1a1a2e] mb-6 leading-tight">
                   {content.facilities.studyPoint.title}
                 </h3>
                 <p className="text-[16px] text-[#6b7280] leading-[1.7] mb-8 font-400">
                   {content.facilities.studyPoint.description}
                 </p>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {content.facilities.studyPoint.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-3">
                       <div className="w-5 h-5 rounded-full bg-[#2563eb]/10 flex-shrink-0 flex items-center justify-center">
@@ -79,30 +79,30 @@ const Facilities = ({ content }) => {
                 </div>
               </div>
 
-              {/* Right: Image Grid */}
-              <div className="lg:w-1/2 order-1 lg:order-2">
-                <div className="grid grid-cols-2 grid-rows-2 gap-4 min-h-[300px] sm:min-h-[400px]">
-                  <div className="col-span-2 row-span-1 relative overflow-hidden group h-48 sm:h-56">
+              {/* Right: Image Grid - Responsive */}
+              <div className="lg:w-1/2 order-1 lg:order-2 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                  <div className="col-span-1 sm:col-span-2 relative overflow-hidden group h-64 sm:h-80 md:h-96">
                     <img 
                       src={studyPointImg} 
                       alt="Gurukul Study Point Area" 
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 border border-[#e5e7eb]" />
                   </div>
-                  <div className="col-span-1 row-span-1 relative overflow-hidden group h-36 sm:h-44">
+                  <div className="col-span-1 relative overflow-hidden group h-64 sm:h-72">
                     <img 
                       src={studyPoint2} 
                       alt="Study Area" 
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 border border-[#e5e7eb]" />
                   </div>
-                  <div className="col-span-1 row-span-1 relative overflow-hidden group h-36 sm:h-44">
+                  <div className="col-span-1 relative overflow-hidden group h-64 sm:h-72">
                     <img 
                       src={studyPoint3} 
                       alt="Office Area" 
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 border border-[#e5e7eb]" />
                   </div>

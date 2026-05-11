@@ -32,9 +32,9 @@ const About = ({ content }) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:w-1/2 order-1 lg:order-2"
+            className="lg:w-1/2 order-1 lg:order-2 w-full"
           >
-            <div className="relative overflow-hidden group h-80 sm:h-96">
+            <div className="relative overflow-hidden group h-80 sm:h-96 md:h-[500px] lg:h-[600px]">
               <img
                 src={studentsGroup}
                 alt="Gurukul Boys Hostel Students"

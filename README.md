@@ -1,8 +1,10 @@
 Hostel Website
 
-A modern hostel booking and management website built with React. Users can explore rooms, view facilities, check availability, and contact the hostel easily through a clean and responsive interface.
+##A modern hostel booking and management website built with React. Users can explore rooms, view facilities, check availability, and contact the hostel easily through a clean and responsive interface.
+![Uploading image.png…]()
 
-Features
+
+##Features
 Responsive modern UI
 Room and facility showcase
 Hostel gallery section
@@ -12,7 +14,7 @@ Mobile-friendly design
 Fast loading and optimized assets
 Admin dashboard with password
 
-Tech Stack
+##Tech Stack
 React
 Tailwind CSS
 Framer Motion
@@ -23,7 +25,7 @@ Supabase
 
 
 
-Future Improvements-
+##Future Improvements-
 Online room booking system,
 Payment integration,
 Reviews and ratings,

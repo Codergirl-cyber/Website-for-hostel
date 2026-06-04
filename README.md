@@ -9,6 +9,8 @@ https://website-for-hostel.vercel.app/
 ## Screenshots
 
 <img width="1895" height="894" alt="image" src="https://github.com/user-attachments/assets/fa2de29e-b583-4960-96ec-657ae9d18fb9" />
+<img width="1893" height="901" alt="image" src="https://github.com/user-attachments/assets/b6dda4af-dc0f-4c4c-affa-968ee25b1637" />
+
 
 
 ## Features

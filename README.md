@@ -1,16 +1,68 @@
-# React + Vite
+# Hostel Website 🏨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern hostel booking and management website built with React. Users can explore rooms, view facilities, check availability, and easily connect with the hostel through a clean and responsive interface.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://website-for-hostel.vercel.app/
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<img width="1895" height="894" alt="image" src="https://github.com/user-attachments/assets/fa2de29e-b583-4960-96ec-657ae9d18fb9" />
+<img width="1893" height="901" alt="image" src="https://github.com/user-attachments/assets/b6dda4af-dc0f-4c4c-affa-968ee25b1637" />
+<img width="1508" height="692" alt="image" src="https://github.com/user-attachments/assets/9bede136-9e28-4704-b635-74a25dbe84ba" />
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+## Features
+
+- Modern and responsive UI
+- Room and facility showcase
+- Hostel gallery section
+- Contact form
+- Smooth scrolling navigation
+- Mobile-friendly design
+- Fast loading and optimized experience
+- Admin dashboard with password authentication
+
+## Tech Stack
+
+Frontend:
+- React
+- Tailwind CSS
+- JavaScript
+- Framer Motion
+
+Backend / Database:
+- Supabase
+
+## Why I Built This
+
+I built this project to improve my frontend development skills and create a realistic booking-style application. The goal was to design a clean user experience while learning responsive layouts, animations, and backend integration.
+
+## Challenges
+
+- Designing a responsive layout across devices
+- Organizing multiple sections without clutter
+- Creating smooth animations
+- Managing dashboard functionality and data flow
+
+## What I Learned
+
+- Building reusable React components
+- Integrating Supabase
+- Creating responsive UI designs
+- Working with animations using Framer Motion
+- Structuring larger frontend projects
+
+## Installation
+
+```bash
+git clone <your-repo-link>
+
+cd hostel-website
+
+npm install
+
+npm run dev

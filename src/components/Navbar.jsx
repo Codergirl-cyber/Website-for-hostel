@@ -29,11 +29,12 @@ const Navbar = ({ lang, setLang, content, onOpenModal }) => {
         <div className="max-w-7xl mx-auto flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#home" className="flex items-center gap-3 group">
+            <a href="#home" className="flex items-center gap-3">
               <img 
                 src="/logo.png" 
                 alt="Gurukul Boys Hostel Logo" 
-                className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105 max-h-10 max-w-10"
+                className="h-14 w-auto max-w-none"
+                style={{ height: '56px', width: 'auto', maxWidth: 'none' }}
               />
               <span className="text-lg font-600 text-[#1a1a2e] transition-colors duration-300 hidden sm:block">
                 GURUKUL

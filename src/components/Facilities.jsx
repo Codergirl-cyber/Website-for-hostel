@@ -82,29 +82,29 @@ const Facilities = ({ content }) => {
               {/* Right: Image Grid - Responsive */}
               <div className="lg:w-1/2 order-1 lg:order-2 w-full">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                  <div className="col-span-1 sm:col-span-2 relative overflow-hidden group h-64 sm:h-80 md:h-96">
+                  <div className="col-span-1 sm:col-span-2 relative overflow-hidden group rounded-xl self-start">
                     <img 
                       src={studyPointImg} 
                       alt="Gurukul Study Point Area" 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 border border-[#e5e7eb]" />
+                    <div className="absolute inset-0 border border-[#e5e7eb] pointer-events-none" />
                   </div>
-                  <div className="col-span-1 relative overflow-hidden group h-64 sm:h-72">
+                  <div className="col-span-1 relative overflow-hidden group rounded-xl self-start">
                     <img 
                       src={studyPoint2} 
                       alt="Study Area" 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 border border-[#e5e7eb]" />
+                    <div className="absolute inset-0 border border-[#e5e7eb] pointer-events-none" />
                   </div>
-                  <div className="col-span-1 relative overflow-hidden group h-64 sm:h-72">
+                  <div className="col-span-1 relative overflow-hidden group rounded-xl self-start">
                     <img 
                       src={studyPoint3} 
                       alt="Office Area" 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full transition-transform duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 border border-[#e5e7eb]" />
+                    <div className="absolute inset-0 border border-[#e5e7eb] pointer-events-none" />
                   </div>
                 </div>
               </div>
